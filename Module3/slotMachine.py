@@ -14,15 +14,20 @@ while isActive:
   bet = int(input("How much do you wish to bet? (Enter a number from 1 to 3, 4 to cash out): "))
 
   if bet == 1 or bet == 2 or bet == 3:
-    num1 = random.randrange(1, 6)
-    num2 = random.randrange(1, 6)
-    num3 = random.randrange(1, 6)
+    # num1 = random.randrange(1, 6)
+    # num2 = random.randrange(1, 6)
+    # num3 = random.randrange(1, 6)
+    num1 = 1
+    num2 = 3
+    num3 = 5
     print(num1, num2, num3)
-
-    if (num1 != num2 or num1 !=num3 or num3 != num2):
+    # if num1 != num2 and num1 != num3 and num2 != num3, player loses bet
+    if num1 != num2 and num1 !=num3 and num3 != num2:
       print(f"You lose {bet} tokens")
       tokens -= bet
-    tokens += bet
+    # if num1 == num2 or num1 == num3 or num2 == num3, player wins bet
+      # if num1 == num2 and num2 == num3, player wins num1 to the power of bet
+    # tokens += bet
     print("Tokens:", tokens)
 
   if bet == 4:
