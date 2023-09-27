@@ -5,6 +5,7 @@
 # The algorithm for winning tokens is as follows: The number they rolled to the power of the number they bet.
 # So if they rolled all 2's and they bet 3 tokens, it would be 2 to the power of 3: or 8 tokens.
 import random
+import math
 
 isActive = True
 print("Murph E Cheese Slot Machine")
@@ -14,20 +15,20 @@ while isActive:
   bet = int(input("How much do you wish to bet? (Enter a number from 1 to 3, 4 to cash out): "))
 
   if bet == 1 or bet == 2 or bet == 3:
-    # num1 = random.randrange(1, 6)
-    # num2 = random.randrange(1, 6)
-    # num3 = random.randrange(1, 6)
-    num1 = 1
-    num2 = 3
-    num3 = 5
+    num1 = random.randrange(1, 6)
+    num2 = random.randrange(1, 6)
+    num3 = random.randrange(1, 6)
+    # num1 = 5
+    # num2 = 5
+    # num3 = 5
     print(num1, num2, num3)
-    # if num1 != num2 and num1 != num3 and num2 != num3, player loses bet
-    if num1 != num2 and num1 !=num3 and num3 != num2:
-      print(f"You lose {bet} tokens")
+    if num1 == num2 and num2 == num3:
+      win = int(math.pow(num1, bet))
+      tokens += win
+      print(f"You win {win} tokens")
+    else:
       tokens -= bet
-    # if num1 == num2 or num1 == num3 or num2 == num3, player wins bet
-      # if num1 == num2 and num2 == num3, player wins num1 to the power of bet
-    # tokens += bet
+      print(f"You lose {bet} tokens")
     print("Tokens:", tokens)
 
   if bet == 4:
