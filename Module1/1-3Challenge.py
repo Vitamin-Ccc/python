@@ -1,0 +1,11 @@
+name = input("Enter a name: ")
+hobby = input("Enter a hobby: ")
+adjective = input("Enter an adjective: ")
+love = input("Enter a love: ")
+hate = input("Enter a hate: ")
+personality = input("Enter a personality trait: ")
+personality2 = input("Enter a personality trait: ")
+philosophy = input("Enter a philosophy: ")
+feeling = input("Enter a feeling: ")
+
+print(f"Hello, my name is {name}. One thing I would like for you to know about me is when I am not programing I love to {hobby}. I also want you to know that I am a {adjective} student who loves {love} but absolutely hates {hate}! The best way to describe my personality is {personality} and {personality2}. My personal philosophy or a strong belief that I have that guides me through my life is {philosophy}. I am {feeling} to learn about programming!")
