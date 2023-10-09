@@ -8,5 +8,39 @@ import random
 
 print("Stuck in the Mud")
 
-dices = []
+dices = [ ]
+# generates 5 random numbers
+for i in range(5):
+      dices.append(random.randrange(1, 7))
 
+newDices = [ ]
+score = 0
+isActive = True
+
+while isActive:
+  start = input("Press r to roll or q to quit: ").lower()
+  if start == "q":
+    print("Thanks for playing!")
+    isActive = False
+
+  if start == "r":
+    # prints dices
+    print("You rolled:", dices)
+    # compare values to see if there are 2s and 5s
+    for i in dices:
+      if i != 2 and i != 5:
+        # add number to score if they're not 2s and 5s
+        score += i
+        # Now roll again, and add them to a new set of dices
+        newDices.append(random.randrange(1, 7))
+      elif i == 2 or i == 5:
+        # add the numbers to a new set of dices
+        newDices.append(i)
+
+    print("Score:", score)
+    print()
+
+    # reassign dices to the new set of dices
+    dices = newDices
+    # now new dices becomes empty
+    newDices = [ ]
