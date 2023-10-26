@@ -4,7 +4,7 @@
 
 # Perform input validation using exception handling by making sure the user enters only numbers (no strings!) and that those numbers are positive.
 
-print("Welcome to the Weber State University HUman Performance Lab!\nPlease utilize the following calculator to find your ideal fat burning heart rate and BMI.")
+print("Welcome to the Weber State University Human Performance Lab!\nPlease utilize the following calculator to find your ideal fat burning heart rate and BMI.")
 ageRun = 0
 heightRun = 0
 weightRun = 0
